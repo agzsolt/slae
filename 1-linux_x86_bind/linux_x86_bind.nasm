@@ -14,11 +14,11 @@ _start:
 ;SOCK_STREAM = 1 (/usr/include/i386-linux-gnu/bits/socket_type.h)
 ; eax=0x66, ebx=0x01, stack has the socket args: 2,1,0
 
-push 0x66		      ; 0x00 in eax
+push 0x66
 pop eax			      ; move socket syscall to eax
 
 xor ebx, ebx		  ; 0x00 in ebx
-push ebx
+push ebx          ; push 0x00 to the stack
 inc ebx			      ; put 0x1 to ebx
 
 push ebx		      ; value 0x01 is pushed in to the stack (SOCK_STREAM=1)
