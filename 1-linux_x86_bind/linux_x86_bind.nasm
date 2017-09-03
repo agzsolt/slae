@@ -1,4 +1,4 @@
-; Title: Linux/x86 Bind Shell code - 91bit
+; Title: Linux/x86 Bind Shell code - 90bit
 ; Author: Zsolt Agoston (agzsolt)
 
 global _start
