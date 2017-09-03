@@ -1,4 +1,4 @@
-inc ebx			; accept(5); Title: Linux/x86 Bind Shell code - 89 bytes
+; Title: Linux/x86 Bind Shell code - 89 bytes
 ; Author: Zsolt Agoston (agzsolt)
 
 global _start
