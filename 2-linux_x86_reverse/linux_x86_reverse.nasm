@@ -65,6 +65,7 @@ mov ecx, esp            ; save the pointer to args in ecx register
 int 0x80  
           
 ;execute shell (here we use /bin/sh) using execve call
+;int execve(const char *filename, char *const argv[], char *const envp[])
 ;execve("//bin/sh",["//bin/sh"])
 ; eax=0x0b, ebx=(pointer to the kernel instruction), ecx=0, edx=0
 	
