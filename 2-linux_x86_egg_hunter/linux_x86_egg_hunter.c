@@ -1,7 +1,6 @@
 /*
  Title: Linux/x86 Egg Hunter code - POC
  Author: Zsolt Agoston (agzsolt)
- Source: https://www.exploit-db.com/exploits/40056
 */
 
 #include <stdio.h>
