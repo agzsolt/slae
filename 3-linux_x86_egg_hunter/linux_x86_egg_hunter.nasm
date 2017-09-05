@@ -9,7 +9,7 @@ _start:
         xor edx, edx		;clear out edx
 
 next4k:
-        or dx, 0xfff     	;put 4095 in the counter
+        or dx, 0xfff     	;put 4095 in the counter, next inc will complete 4k
 
 eggfind:
         inc edx         	;PAGE_SIZE=4096
