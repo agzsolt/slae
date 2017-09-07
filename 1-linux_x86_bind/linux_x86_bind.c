@@ -1,7 +1,6 @@
 /*
  Title: Linux/x86 Bind Shell code - simple C skeleton
  Author: Zsolt Agoston (agzsolt)
- Website: http://x86net.com
  Source: https://www.exploit-db.com/exploits/40056
 */
 
