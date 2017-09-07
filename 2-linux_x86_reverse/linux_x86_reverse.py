@@ -1,7 +1,8 @@
 #!/usr/bin/python
 # Title: Linux/x86 Reverse Shell code creator
 # Author: Zsolt Agoston (agzsolt)
-
+# Website: http://x86net.com
+                
 import sys
 
 if len(sys.argv)<3:
