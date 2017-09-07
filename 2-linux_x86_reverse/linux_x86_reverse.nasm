@@ -1,5 +1,6 @@
 ; Title: Linux/x86 Reverse Shell code - 73 bytes
 ; Author: Zsolt Agoston (agzsolt)
+; Website: http://x86net.com
 
 global _start           
  
