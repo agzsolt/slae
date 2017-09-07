@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # Title: Linux/x86 Bind Shell code creator
 # Author: Zsolt Agoston (agzsolt)
+# Website: http://x86net.com
 
 import sys
 
